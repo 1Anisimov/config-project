@@ -1,6 +1,12 @@
 {
+  "Lorem": "Lorem",
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit": {
+    " Repudiandae, aspernatur!": " Repudiandae, aspernatur!"
+  },
+  "lorem": "lorem",
   "shift": "shift",
   "throw error": "throw error",
+  "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
