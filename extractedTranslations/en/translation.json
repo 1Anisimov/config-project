@@ -3,10 +3,13 @@
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit": {
     " Repudiandae, aspernatur!": " Repudiandae, aspernatur!"
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "lorem": "lorem",
   "shift": "",
   "throw error": "throw error",
   "toggle": "",
+  "value": "value",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",

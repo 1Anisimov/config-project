@@ -13,5 +13,8 @@
   "shift": "Переключить",
   "Короткий язык": "Ru",
   "Lorem": "Лорем",
-  "lorem": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quam!"
+  "lorem": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quam!",
+  "decrement": "убавить",
+  "value": "значение",
+  "increment": "приращение"
 }
