@@ -16,5 +16,7 @@
   "lorem": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quam!",
   "decrement": "убавить",
   "value": "значение",
-  "increment": "приращение"
+  "increment": "приращение",
+  "Password": "Пароль",
+  "Login": "Логин"
 }
