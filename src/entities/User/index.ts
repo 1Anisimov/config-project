@@ -1,3 +1,4 @@
+export { getUserAuthData } from './model/selectors/getUserAuthData';
 export {
     userActions,
     userReducer,

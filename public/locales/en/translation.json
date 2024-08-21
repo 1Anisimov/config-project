@@ -18,5 +18,6 @@
   "increment": "increment",
   "decrement": "decrement",
   "Login": "Login",
-  "Password": "Password"
+  "Password": "Password",
+  "loginError": "invalid username or password"
 }

@@ -64,3 +64,13 @@
 .size_XL {
     font: var(--font-xl);
 }
+
+.disabled {
+    color: rgb(83 83 83 / 80%);
+    border: 1px solid rgb(83 83 83 / 80%);
+    cursor: default;
+}
+
+.errorWrapper {
+    color: red;
+}
