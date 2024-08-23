@@ -19,5 +19,6 @@
   "decrement": "decrement",
   "Login": "Login",
   "Password": "Password",
-  "loginError": "invalid username or password"
+  "loginError": "invalid username or password",
+  "ProfilePage": "Profile Page"
 }

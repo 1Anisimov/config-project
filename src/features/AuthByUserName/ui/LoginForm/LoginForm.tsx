@@ -2,13 +2,14 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import {
     DynamicModuleLoader,
     ReducerList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import loginReducer, { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
@@ -19,6 +20,7 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducerList = {
@@ -26,8 +28,8 @@ const initialReducers: ReducerList = {
 };
 
 const LoginForm = memo((props: LoginFormProps) => {
-    const { className } = props;
-    const dispatch = useDispatch();
+    const { className, onSuccess } = props;
+    const dispatch = useAppDispatch();
     const { t } = useTranslation();
 
     const username = useSelector(getLoginUsername);
@@ -43,9 +45,12 @@ const LoginForm = memo((props: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUserName({ username, password }));
-    }, [dispatch, password, username]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUserName({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [dispatch, onSuccess, password, username]);
 
     return (
         // eslint-disable-next-line i18next/no-literal-string

@@ -18,6 +18,13 @@
       }
     ],
     "profile": {
-      "name": "typicode"
+      "first": "Александр",
+      "lastname": "Анисимов",
+      "age": "22",
+      "currency": "RUB",
+      "country": "Russia",
+      "sity": "Ekaterinburg",
+      "username": "admin",
+      "avatar": "https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg"
     }
   }
