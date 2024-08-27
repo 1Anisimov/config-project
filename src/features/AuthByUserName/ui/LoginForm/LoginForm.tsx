@@ -20,7 +20,7 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 
 export interface LoginFormProps {
     className?: string;
-    onSuccess: () => void;
+    onSuccess?: () => void;
 }
 
 const initialReducers: ReducerList = {
@@ -48,7 +48,7 @@ const LoginForm = memo((props: LoginFormProps) => {
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUserName({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
-            onSuccess();
+            onSuccess?.();
         }
     }, [dispatch, onSuccess, password, username]);
 

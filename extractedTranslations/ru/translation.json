@@ -1,10 +1,14 @@
 {
+  "Edit": "Edit",
+  "Last Name": "Last Name",
   "Login": "Login",
   "Lorem": "Lorem",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit": {
     " Repudiandae, aspernatur!": " Repudiandae, aspernatur!"
   },
+  "Name": "Name",
   "Password": "Password",
+  "Profile": "Profile",
   "ProfilePage": "ProfilePage",
   "decrement": "decrement",
   "increment": "increment",
