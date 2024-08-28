@@ -20,5 +20,13 @@
   "Login": "Login",
   "Password": "Password",
   "loginError": "invalid username or password",
-  "ProfilePage": "Profile Page"
+  "ProfilePage": "Profile Page",
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City",
+  "Username": "Username",
+  "Avatar": "Avatar"
 }
