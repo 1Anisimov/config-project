@@ -3,7 +3,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import Avatar from 'shared/assets/icons/smesharik-nusha.jpg';
+// import Avatar from 'shared/assets/icons/smesharik-nusha.jpg';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -26,7 +26,7 @@ Primary.args = {
         country: Country.Russia,
         city: 'Ekaterinburg',
         username: 'admin',
-        avatar: Avatar,
+        avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
     },
 };
 
@@ -50,7 +50,7 @@ Dark.args = {
         country: Country.Russia,
         city: 'Ekaterinburg',
         username: 'admin',
-        avatar: Avatar,
+        avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
     },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
