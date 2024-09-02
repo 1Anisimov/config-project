@@ -4,5 +4,9 @@
         "src/shared/config/i18n"
     ],
     "i18n-ally.keystyle": "flat",
-    "files.eol": "\n"
+    "files.eol": "\n",
+    
+    "files.associations": {
+    "**/.fttemplates/**": "plaintext"
+}
 }

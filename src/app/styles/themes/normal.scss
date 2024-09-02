@@ -1,8 +1,9 @@
-:root {
-    --bg-color: #e8e8ea;
-    --inverted-bg-color: #090949;
-    --primary-color: #0232c2;
-    --secondary-color: #0449e0;
-    --inverted-primary-color: #049604;
-    --inverted-secondary-color: #04ff04;
+:root,
+.app_light_theme {
+    --bg-color: #edf0f0;
+    --inverted-bg-color: #1b1d1a;
+    --primary-color: #1b1d1a;
+    --secondary-color: #2b2c2a;
+    --inverted-primary-color: #edf0f0;
+    --inverted-secondary-color: #fff;
 }
