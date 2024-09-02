@@ -24,3 +24,9 @@ Dark.args = {
     value: Currency.RUB,
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    value: Currency.RUB,
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

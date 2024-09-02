@@ -28,6 +28,12 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     user: { authData: {} },
 })];
 
+export const KIDS = Template.bind({});
+KIDS.args = {};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS), StoreDecorator({
+    user: { authData: {} },
+})];
+
 export const LightNoAuth = Template.bind({});
 LightNoAuth.args = {};
 LightNoAuth.decorators = [StoreDecorator({
@@ -37,5 +43,11 @@ LightNoAuth.decorators = [StoreDecorator({
 export const DarkNoAuth = Template.bind({});
 DarkNoAuth.args = {};
 DarkNoAuth.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    user: {},
+})];
+
+export const KidsNoAuth = Template.bind({});
+KidsNoAuth.args = {};
+KidsNoAuth.decorators = [ThemeDecorator(Theme.KIDS), StoreDecorator({
     user: {},
 })];

@@ -55,3 +55,10 @@ Error.args = {
     text: 'text text text text text',
     theme: TextTheme.ERROR,
 };
+
+export const KIDSTheme = Template.bind({});
+KIDSTheme.args = {
+    title: 'Title Title Title',
+    text: 'text text text text text',
+};
+KIDSTheme.decorators = [ThemeDecorator(Theme.KIDS)];

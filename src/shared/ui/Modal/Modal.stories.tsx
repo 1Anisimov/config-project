@@ -25,3 +25,10 @@ Primary.args = {
     children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quam!',
     isOpen: true,
 };
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quam!',
+    isOpen: true,
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

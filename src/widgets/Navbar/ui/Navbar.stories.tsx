@@ -28,6 +28,12 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
 
 })];
 
+export const KIDS = Template.bind({});
+KIDS.args = {};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS), StoreDecorator({
+
+})];
+
 export const AuthNavBar = Template.bind({});
 AuthNavBar.args = {};
 AuthNavBar.decorators = [StoreDecorator({

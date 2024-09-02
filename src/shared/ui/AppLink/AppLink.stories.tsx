@@ -55,3 +55,10 @@ RedDark.args = {
     theme: AppLinkTheme.RED,
 };
 RedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    children: 'Text',
+    theme: AppLinkTheme.PRIMARY,
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

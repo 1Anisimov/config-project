@@ -23,3 +23,9 @@ Dark.args = {
     placeholder: 'Placeholder',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    placeholder: 'Placeholder',
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

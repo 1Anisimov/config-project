@@ -19,3 +19,7 @@ Primary.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

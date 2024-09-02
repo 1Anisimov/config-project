@@ -54,3 +54,18 @@ Dark.args = {
     },
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    data: {
+        first: 'Александр',
+        lastname: 'Анисимов',
+        age: 22,
+        currency: Currency.RUB,
+        country: Country.Russia,
+        city: 'Ekaterinburg',
+        username: 'admin',
+        avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
+    },
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

@@ -26,5 +26,21 @@ Primary.args = {
 export const Dark = Template.bind({});
 Dark.args = {
     label: 'Label',
+    options: [
+        { value: '1', content: 'Первый пункт' },
+        { value: '2', content: 'Второй пункт' },
+        { value: '3', content: 'Третий пункт' },
+    ],
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const KIDS = Template.bind({});
+KIDS.args = {
+    label: 'Label',
+    options: [
+        { value: '1', content: 'Первый пункт' },
+        { value: '2', content: 'Второй пункт' },
+        { value: '3', content: 'Третий пункт' },
+    ],
+};
+KIDS.decorators = [ThemeDecorator(Theme.KIDS)];
