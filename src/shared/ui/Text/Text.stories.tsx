@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -62,3 +62,10 @@ KIDSTheme.args = {
     text: 'text text text text text',
 };
 KIDSTheme.decorators = [ThemeDecorator(Theme.KIDS)];
+
+export const TextSizeL = Template.bind({});
+TextSizeL.args = {
+    title: 'Title Title Title',
+    text: 'text text text text text',
+    size: TextSize.L,
+};
