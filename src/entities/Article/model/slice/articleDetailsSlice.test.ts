@@ -1,5 +1,5 @@
 import { articleDetailsReducer } from './articleDetailsSlice';
-import { articleDetailsSchema } from '../types/articleDetailsSchema';
+import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 import { Article, ArticleBlockType, ArticleType } from '../types/article';
 
@@ -83,32 +83,32 @@ const data: Article = {
 
 describe('profileSlice.test', () => {
     test('set isLoading artical service pending', () => {
-        const state: DeepPartial<articleDetailsSchema> = {
+        const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: false,
         };
-        expect(articleDetailsReducer(state as articleDetailsSchema, fetchArticleById.pending)).toEqual({
+        expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending)).toEqual({
             isLoading: true,
         });
     });
 
     test('set isLoading profile service fulfilled', () => {
-        const state: DeepPartial<articleDetailsSchema> = {
+        const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: true,
             data: undefined,
         };
-        expect(articleDetailsReducer(state as articleDetailsSchema, fetchArticleById.fulfilled(data, '', ''))).toEqual({
+        expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.fulfilled(data, '', ''))).toEqual({
             isLoading: false,
             data,
         });
     });
 
     test('set isLoading profile service fulfilled', () => {
-        const state: DeepPartial<articleDetailsSchema> = {
+        const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: true,
             data: undefined,
             error: undefined,
         };
-        expect(articleDetailsReducer(state as articleDetailsSchema, fetchArticleById.rejected)).toEqual({
+        expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.rejected)).toEqual({
             isLoading: false,
             data: undefined,
         });
