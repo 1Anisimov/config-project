@@ -93,7 +93,6 @@ const articleData: Article = {
 
 export const Light = Template.bind({});
 Light.args = {
-
 };
 Light.decorators = [StoreDecorator({
     articleDetails: {
