@@ -1,7 +1,15 @@
+import { User } from '../../../User/model/types/user';
+
+/* eslint-disable no-unused-vars */
 export enum ArticleBlockType {
     TEXT = 'TEXT',
     CODE = 'CODE',
     IMAGE = 'IMAGE'
+}
+
+export enum ArticleView {
+    BIG = 'BIG',
+    SMALL = 'SMALL',
 }
 
 export interface ArticleBlockBase {
@@ -36,6 +44,7 @@ export enum ArticleType {
 
 export interface Article {
     id: string;
+    user: User;
     title: string;
     subtitle: string;
     img: string;

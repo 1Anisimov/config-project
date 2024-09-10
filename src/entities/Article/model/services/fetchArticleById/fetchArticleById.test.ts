@@ -9,6 +9,11 @@ jest.mock('axios');
 
 const articles: Article = {
     id: '1',
+    user: {
+        id: '1',
+        username: 'admin',
+        avatar: 'https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg',
+    },
     title: 'JavaScript news',
     subtitle: 'Что нового в JavaScript в 2022 году?',
     img: 'https://i.pinimg.com/originals/2a/e1/8a/2ae18a66f89f1dc3fff96203288fcb64.png',

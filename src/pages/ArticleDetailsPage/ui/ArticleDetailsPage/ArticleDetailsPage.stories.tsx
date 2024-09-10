@@ -15,6 +15,10 @@ const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDe
 
 const articleData: Article = {
     id: '1',
+    user: {
+        id: '1',
+        username: 'admin',
+    },
     title: 'JavaScript news',
     subtitle: 'Что нового в JavaScript в 2022 году?',
     img: 'https://i.pinimg.com/originals/2a/e1/8a/2ae18a66f89f1dc3fff96203288fcb64.png',
