@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
@@ -9,6 +10,7 @@ import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
 import { ArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { AddComentFormSchema } from '../../../../features/addComentForm/model/types/addComentForm';
 
 export interface StateSchema {
@@ -21,6 +23,7 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentSchema;
     addComentForm?: AddComentFormSchema;
+    articlesPage?: ArticlesPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
