@@ -17,10 +17,12 @@ const viewTypes = [
     {
         view: ArticleView.BIG,
         icon: ViewBigIcon,
+        id: 1,
     },
     {
         view: ArticleView.SMALL,
         icon: ViewSmallIcon,
+        id: 2,
     },
 ];
 
@@ -35,6 +37,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {viewTypes.map((viewType) => (
                 <Button
+                    key={viewType.id}
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
                 >

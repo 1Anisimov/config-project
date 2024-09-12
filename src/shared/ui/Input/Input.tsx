@@ -24,7 +24,7 @@ export const Input = memo((props: InputProps) => {
     } = props;
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value);
+        onChange?.(e?.target?.value);
     };
 
     const mods: Mods = {

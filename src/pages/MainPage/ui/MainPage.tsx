@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Page } from 'shared/ui/Page/Page';
 
 interface MainPageProps {
     className?: string;
@@ -10,9 +11,9 @@ const MainPage = (props: MainPageProps) => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <Page className={classNames('', {}, [className])}>
             {t('Главная страница')}
-        </div>
+        </Page>
     );
 };
 

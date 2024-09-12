@@ -39,7 +39,7 @@ export const Select = memo((props: SelectProps) => {
     const mods: Mods = {};
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange?.(e.target.value);
+        onChange?.(e?.target?.value);
     };
 
     return (
