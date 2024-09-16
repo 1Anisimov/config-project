@@ -8,6 +8,7 @@ import {
     articleDetailsCommentsReducer,
 } from 'pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlesPageSlice';
+import { scrollSaveReducer } from 'features/ScrollSave';
 import { ReducerList } from '../../../lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducerList = {
@@ -17,6 +18,7 @@ const defaultAsyncReducers: ReducerList = {
     addComentForm: addCommentFormReducer,
     articleDetailsComments: articleDetailsCommentsReducer,
     articlesPage: articlesPageReducer,
+    scrollSave: scrollSaveReducer,
 };
 
 export const StoreDecorator = (

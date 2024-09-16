@@ -32,6 +32,9 @@ Normal.decorators = [StoreDecorator({
         },
         readonly: true,
     },
+    scrollSave: {
+        scroll: {},
+    },
 
 })];
 
@@ -53,6 +56,9 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
         },
         readonly: true,
     },
+    scrollSave: {
+        scroll: {},
+    },
 })];
 
 export const KIDS = Template.bind({});
@@ -72,5 +78,8 @@ KIDS.decorators = [ThemeDecorator(Theme.KIDS), StoreDecorator({
             avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
         },
         readonly: true,
+    },
+    scrollSave: {
+        scroll: {},
     },
 })];

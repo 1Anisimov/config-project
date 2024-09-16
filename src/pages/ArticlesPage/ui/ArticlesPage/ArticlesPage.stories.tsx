@@ -111,6 +111,9 @@ Normal.decorators = [StoreDecorator({
         ids: [1, 2, 3],
         view: ArticleView.SMALL,
     },
+    scrollSave: {
+        scroll: {},
+    },
 })];
 
 export const Dark = Template.bind({});
@@ -124,5 +127,8 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
         },
         ids: [1, 2, 3],
         view: ArticleView.SMALL,
+    },
+    scrollSave: {
+        scroll: {},
     },
 })];

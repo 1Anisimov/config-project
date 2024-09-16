@@ -103,6 +103,9 @@ Light.decorators = [StoreDecorator({
 
         data: articleData,
     },
+    scrollSave: {
+        scroll: {},
+    },
 })];
 
 export const LightIsLoading = Template.bind({});
@@ -115,6 +118,9 @@ LightIsLoading.decorators = [StoreDecorator({
         isLoading: true,
         data: articleData,
     },
+    scrollSave: {
+        scroll: {},
+    },
 })];
 
 export const LightIsError = Template.bind({});
@@ -123,5 +129,8 @@ LightIsError.decorators = [StoreDecorator({
     articleDetails: {
         error: 'error',
         data: articleData,
+    },
+    scrollSave: {
+        scroll: {},
     },
 })];
