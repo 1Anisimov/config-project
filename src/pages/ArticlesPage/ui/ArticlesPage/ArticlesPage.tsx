@@ -9,9 +9,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
-import {
-    fetchArticlesList,
-} from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
     getArticlePageIsLoading,
     getArticlePageView,
@@ -46,10 +44,7 @@ const ArticlesPage = (props: ArticleDetailsPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticlesPage());
     });
 
     const onChangeView = useCallback((view: ArticleView) => {
@@ -57,7 +52,7 @@ const ArticlesPage = (props: ArticleDetailsPageProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader removeAfterUnmount={false} reducers={reducers}>
             <Page onScrollEnd={onLoadNextPart} className={classNames('', {}, [className])}>
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <ArticleList
