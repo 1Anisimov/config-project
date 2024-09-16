@@ -11,11 +11,13 @@ import { LoginSchema } from 'features/AuthByUserName';
 import { ArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import { NavigateOptions, To } from 'react-router-dom';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollSaveSchema } from 'features/ScrollSave';
 import { AddComentFormSchema } from '../../../../features/addComentForm/model/types/addComentForm';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    scrollSave: ScrollSaveSchema;
 
     // Async Reducers:
     loginForm?: LoginSchema;
