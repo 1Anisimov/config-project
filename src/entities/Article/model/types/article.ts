@@ -1,6 +1,13 @@
 import { User } from '../../../User/model/types/user';
 
 /* eslint-disable no-unused-vars */
+export enum ArticleSortField {
+    TITLE = 'title',
+    CREATED = 'createdAt',
+    VIEW = 'views',
+}
+
+/* eslint-disable no-unused-vars */
 export enum ArticleBlockType {
     TEXT = 'TEXT',
     CODE = 'CODE',
@@ -37,6 +44,7 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
 export enum ArticleType {
+    ALL = 'ALL',
     IT = 'IT',
     SCIENCE = 'SCIENCE',
     ECONOMICS = 'ECONOMICS'

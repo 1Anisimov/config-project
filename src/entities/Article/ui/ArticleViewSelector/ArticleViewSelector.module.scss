@@ -1,8 +1,15 @@
 .ArticleViewSelector {
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .notSelected {
     opacity: 0.5;
     fill: var(--secondary-color);
+}
+
+.button {
+    display: flex;
+    align-items: center;
 }

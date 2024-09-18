@@ -7,9 +7,10 @@
 .SMALL {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 
-    .card {
-        margin-bottom: 30px;
-        margin-right: 30px;
-    }
+    // .card {
+    //     margin-bottom: 30px;
+    //     margin-right: 30px;
+    // }
 }
