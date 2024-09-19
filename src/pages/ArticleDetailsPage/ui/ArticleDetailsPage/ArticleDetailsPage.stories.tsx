@@ -99,8 +99,10 @@ export const Light = Template.bind({});
 Light.args = {
 };
 Light.decorators = [StoreDecorator({
-    articleDetails: {
+    articleDetailsPage: {
 
+    },
+    articleDetails: {
         data: articleData,
     },
     scrollSave: {

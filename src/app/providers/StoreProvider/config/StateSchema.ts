@@ -8,10 +8,9 @@ import { CounterSchema } from 'entities/Counter';
 import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
-import { ArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
-import { NavigateOptions, To } from 'react-router-dom';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { ScrollSaveSchema } from 'features/ScrollSave';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { AddComentFormSchema } from '../../../../features/addComentForm/model/types/addComentForm';
 
 export interface StateSchema {
@@ -23,9 +22,9 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentSchema;
     addComentForm?: AddComentFormSchema;
     articlesPage?: ArticlesPageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

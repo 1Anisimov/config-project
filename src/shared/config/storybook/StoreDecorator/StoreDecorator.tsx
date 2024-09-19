@@ -4,11 +4,9 @@ import articleDetailsReducer from 'entities/Article/model/slice/articleDetailsSl
 import { profileReducer } from 'entities/Profile';
 import { addCommentFormReducer } from 'features/addComentForm/model/slices/addComentFormSlice';
 import loginReducer from 'features/AuthByUserName/model/slice/loginSlice';
-import {
-    articleDetailsCommentsReducer,
-} from 'pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlesPageSlice';
 import { scrollSaveReducer } from 'features/ScrollSave';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slice/index';
 import { ReducerList } from '../../../lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducerList = {
@@ -16,7 +14,7 @@ const defaultAsyncReducers: ReducerList = {
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addComentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
     articlesPage: articlesPageReducer,
     scrollSave: scrollSaveReducer,
 };

@@ -10,6 +10,21 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+*::-webkit-scrollbar {
+    width: 8px;               /* ширина scrollbar */
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-color);        /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 2px solid var(--primary-color);  /* padding вокруг плашки */
+}
+
 .app,
 .app_modal {
     font: var(--font-m);
