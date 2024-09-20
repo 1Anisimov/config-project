@@ -11,6 +11,7 @@
   "City": "City",
   "CommentList": "CommentList",
   "Edit": "Edit",
+  "Edit page": "Edit page",
   "Error": "Error",
   "Last Name": "Last Name",
   "Loading": {
@@ -29,6 +30,7 @@
   "Password": "Password",
   "Profile": "Profile",
   "ProfilePage": "ProfilePage",
+  "Project o_0": "Project o_0",
   "Save": "Save",
   "Username": "Username",
   "decrement": "decrement",
@@ -71,8 +73,11 @@
   "Произошла ошибка при загрузке страницы": {
     "": ""
   },
+  "Редактировать": "Редактировать",
   "Рекомендуем": "Рекомендуем",
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
+  "Создание статьи": "Создание статьи",
+  "Создать статью": "Создать статью",
   "Сортировать по": "Сортировать по",
   "Статьи не найдены": "",
   "Статья не найдена": "Статья не найдена",
