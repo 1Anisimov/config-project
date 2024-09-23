@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'forses-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -59,6 +60,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'no-console': 'off',
         'no-debugger': 'off',
+        'forses-plugin/forses-path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

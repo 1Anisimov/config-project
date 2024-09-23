@@ -13,7 +13,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/addComentForm';
 import { Page } from 'widgets/Page/Page';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slice';
+import { articleDetailsPageReducer } from '../../model/slice';
 import {
     fetchArticlesRecommendations,
 } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
