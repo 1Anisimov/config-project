@@ -1,22 +1,12 @@
 .CommentCard {
-    max-width: 100%;
     border: 1px solid var(--primary-color);
     padding: 10px;
 }
 
-.header {
-    display: flex;
-    align-items: center;
+.loading {
+    border: none;
 }
 
 .text {
-    margin-top: 10px;
-}
-
-.username {
-    margin-left: 10px;
-}
-
-.loading {
-    border: none;
+    margin-left: 8px;
 }

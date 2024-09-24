@@ -3,6 +3,7 @@ import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
+// import { VStack } from 'shared/ui/Stack';
 import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
@@ -21,6 +22,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     }
 
     return (
+        // <VStack >
         <AppLink
             theme={AppLinkTheme.SECONDARY}
             to={item.path}
@@ -29,5 +31,6 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
             <item.Icon className={cls.icon} />
             <span className={cls.link}>{item.text}</span>
         </AppLink>
+        // </VStack>
     );
 });
