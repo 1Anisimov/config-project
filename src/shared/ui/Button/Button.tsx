@@ -18,6 +18,11 @@ export enum ButtonSize {
     XL = 'size_XL',
 }
 
+export enum ButtonMaxWidth {
+    MAX = 'max_width_max',
+    AUTO = 'max_width_auto'
+}
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
     theme?: ButtonTheme;
@@ -25,6 +30,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     size?: ButtonSize;
     disabled?: boolean;
     children?: ReactNode;
+    maxWidth?: ButtonMaxWidth;
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -34,6 +40,7 @@ export const Button = memo((props: ButtonProps) => {
         theme = ButtonTheme.OUTLINE,
         square,
         size = ButtonSize.M,
+        maxWidth = ButtonMaxWidth.AUTO,
         disabled,
         ...otherProps
     } = props;
@@ -43,6 +50,7 @@ export const Button = memo((props: ButtonProps) => {
         [cls.square]: square,
         [cls[size]]: true,
         [cls.disabled]: disabled,
+        [cls[maxWidth]]: true,
     };
 
     return (
