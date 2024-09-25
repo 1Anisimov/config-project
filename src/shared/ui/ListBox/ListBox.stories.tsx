@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Currency } from 'entities/Currency';
 import { ListBox } from './ListBox';
 
 export default {
@@ -12,15 +13,58 @@ export default {
     },
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = () => <ListBox />;
+const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const ListBoxCurrency = Template.bind({});
+ListBoxCurrency.args = {
+    items: [
+        { value: Currency.RUB, content: Currency.RUB },
+        { value: Currency.EUR, content: Currency.EUR, disabled: true },
+        { value: Currency.USD, content: Currency.USD },
+    ],
+    value: Currency.RUB,
+    defaultValue: 'Укажите валюту',
+    readonly: false,
+    label: 'Укажите валюту',
+};
+
+export const ListBoxReadonly = Template.bind({});
+ListBoxReadonly.args = {
+    items: [
+        { value: Currency.RUB, content: Currency.RUB },
+        { value: Currency.EUR, content: Currency.EUR },
+        { value: Currency.USD, content: Currency.USD },
+    ],
+    value: Currency.RUB,
+    defaultValue: 'Укажите валюту',
+    readonly: true,
+    label: 'Укажите валюту',
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    items: [
+        { value: Currency.RUB, content: Currency.RUB },
+        { value: Currency.EUR, content: Currency.EUR, disabled: true },
+        { value: Currency.USD, content: Currency.USD },
+    ],
+    value: Currency.RUB,
+    defaultValue: 'Укажите валюту',
+    readonly: false,
+    label: 'Укажите валюту',
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const KIDS = Template.bind({});
-KIDS.args = {};
+KIDS.args = {
+    items: [
+        { value: Currency.RUB, content: Currency.RUB },
+        { value: Currency.EUR, content: Currency.EUR, disabled: true },
+        { value: Currency.USD, content: Currency.USD },
+    ],
+    value: Currency.RUB,
+    defaultValue: 'Укажите валюту',
+    readonly: false,
+    label: 'Укажите валюту',
+};
 KIDS.decorators = [ThemeDecorator(Theme.KIDS)];
