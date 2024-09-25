@@ -1,5 +1,5 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import React, { InputHTMLAttributes, memo, useEffect } from 'react';
+import React, { InputHTMLAttributes, memo } from 'react';
 import cls from './Input.module.scss';
 import { HStack } from '../Stack';
 
@@ -33,7 +33,7 @@ export const Input = memo((props: InputProps) => {
     };
 
     return (
-        <HStack max className={classNames('', {}, [className])}>
+        <HStack max className={classNames('', mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}

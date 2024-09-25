@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Flex, FlexProps } from './Flex';
+import { Flex } from './Flex';
 
 export default {
     title: 'shared/Flex',

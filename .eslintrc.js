@@ -34,7 +34,8 @@ module.exports = {
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
@@ -47,7 +48,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'gap', 'direction'],
+                ignoreAttribute: ['role', 'data-testid', 'to', 'target', 'justify', 'align', 'gap', 'direction'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
