@@ -5,14 +5,13 @@ import cls from './ListBox.module.scss';
 // import CheckIcon from '../../assets/icons/check_icon.svg';
 import { Button } from '../Button/Button';
 import { HStack } from '../Stack';
+import { DropdownDirection } from '../../types/ui';
 
 export interface ListBoxItem {
     value: string;
     content: ReactNode;
     disabled?: boolean;
 }
-
-export type DropdownDirection = 'top' | 'bottom';
 
 export interface ListBoxProps {
     items?: ListBoxItem[];
@@ -26,13 +25,15 @@ export interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-    top: cls.optionsTop,
-    bottom: cls.optionsBottom,
+    top_left: cls.optionsTopLeft,
+    bottom_left: cls.optionsBottomLeft,
+    top_right: cls.optionsTopRight,
+    bottom_right: cls.optionsBottomRight,
 };
 
 export function ListBox(props: ListBoxProps) {
     const {
-        className, items, value, defaultValue, onChange, readonly, label, direction = 'bottom',
+        className, items, value, defaultValue, onChange, readonly, label, direction = 'bottom_right',
     } = props;
 
     const optionClasses = [

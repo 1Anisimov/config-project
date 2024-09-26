@@ -1,0 +1,60 @@
+.DropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.items {
+    background: var(--inverted-bg-color);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 8px;
+    border: 2px solid var(--inverted-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: 10px 25px;
+    border: none;
+    width: 100%;
+    color: var(--inverted-primary-color);
+    cursor: pointer;
+    background: none;
+    border-radius: 8px;
+}
+
+.active {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.optionsTopLeft {
+    bottom: 100%;
+    right: 0;
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}

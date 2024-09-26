@@ -8,7 +8,7 @@ export type ReducerList = {
     [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>
 }
 
-type ReducerListEntry = [StateSchemaKey, Reducer]
+// type ReducerListEntry = [StateSchemaKey, Reducer]
 
 interface DynamicModuleLoaderProps {
     reducers: ReducerList;
@@ -38,7 +38,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
 
         return () => {
             if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(([name, reducer]) => {
+                Object.entries(reducers).forEach(([name, _]) => {
                     store.reducerManager.remove(name as StateSchemaKey);
                     dispatch({ type: `@DESTROY ${name} reducer` });
                 });

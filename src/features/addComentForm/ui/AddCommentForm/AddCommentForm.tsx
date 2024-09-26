@@ -11,7 +11,6 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from 'shared/ui/Stack';
 import {
-    getCommentFormSelectorsError,
     getCommentFormSelectorsText,
 } from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
@@ -35,7 +34,6 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
     const dispatch = useAppDispatch();
 
     const text = useSelector(getCommentFormSelectorsText);
-    const error = useSelector(getCommentFormSelectorsError);
 
     const onCommentTextChange = useCallback((value: string) => {
         dispatch(addCommentFormActions.setText(value));
