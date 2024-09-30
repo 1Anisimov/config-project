@@ -74,6 +74,12 @@
       "userId": "1",
       "text": "c++",
       "id": "97dpnd1"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "bP6WEC1"
     }
   ],
   "users": [
@@ -109,8 +115,8 @@
       "first": "Сергей",
       "lastname": "Бурунов",
       "age": 50,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "EUR",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "user",
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"

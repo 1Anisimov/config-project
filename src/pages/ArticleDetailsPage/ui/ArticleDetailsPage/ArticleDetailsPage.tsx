@@ -1,39 +1,18 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
-import { ArticleDetails, ArticleList } from 'entities/Article';
+import { memo } from 'react';
+import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { CommentList } from 'entities/Comment';
 import {
     DynamicModuleLoader, ReducerList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useSelector } from 'react-redux';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { AddCommentForm } from 'features/addComentForm';
 import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack';
+import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
 import { articleDetailsPageReducer } from '../../model/slice';
-import {
-    fetchArticlesRecommendations,
-} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
-import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
-import {
-    fetchCommentsByArticleId,
-} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import { getCommentsIsLoading } from '../../model/selectors/comments';
 import cls from './ArticleDetailsPage.module.scss';
-import {
-    getArticleComments,
-} from '../../model/slice/articleDetailsCommentsSlice';
-import {
-    addComentForArticle,
-} from '../../model/services/addCommentForArticle/addCommentForArticle';
-import {
-    getArticleRecommendations,
-} from '../../model/slice/articleDetailsPageRecommendations';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -47,21 +26,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const { t } = useTranslation('articleDetails');
     const { id } = useParams<{ id: string }>();
-    const dispatch = useAppDispatch();
-
-    const comments = useSelector(getArticleComments.selectAll);
-    const isLoading = useSelector(getCommentsIsLoading);
-    const recommendations = useSelector(getArticleRecommendations.selectAll);
-    const recommendationsisLoading = useSelector(getArticleRecommendationsIsLoading);
-
-    const onSendComment = useCallback((text: string) => {
-        dispatch(addComentForArticle(text));
-    }, [dispatch]);
-
-    useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
-        dispatch(fetchArticlesRecommendations());
-    });
 
     if (!id) {
         return (
@@ -76,20 +40,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
-                <Text size={TextSize.L} className={cls.commentTitle} title={t('Рекомендуем')} />
-                <ArticleList
-                    target="_blank"
-                    className={cls.articleRecommendations}
-                    articles={recommendations}
-                    isLoading={recommendationsisLoading}
-                />
+                <ArticleRecommendationsList />
                 <VStack max gap="16">
-                    <Text size={TextSize.L} className={cls.commentTitle} title={t('Комментарии')} />
-                    <AddCommentForm onSendComment={onSendComment} />
-                    <CommentList
-                        isLoading={isLoading}
-                        comments={comments}
-                    />
+                    <ArticleDetailsComments id={id} />
                 </VStack>
             </Page>
         </DynamicModuleLoader>
