@@ -7,6 +7,7 @@ import { CommentList } from 'entities/Comment';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { addComentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { getCommentsIsLoading } from '../../model/selectors/comments';
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
@@ -14,7 +15,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 
 interface ArticleDetailsCommentsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
@@ -34,15 +35,16 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
     }, [dispatch]);
 
     return (
-        <Suspense fallback="">
-            <VStack gap="16" max className={className}>
-                <Text size={TextSize.L} title={t('Комментарии')} />
-                <AddCommentForm onSendComment={onSendComment} />
-                <CommentList
-                    isLoading={isLoading}
-                    comments={comments}
-                />
-            </VStack>
-        </Suspense>
+
+        <VStack gap="16" max className={className}>
+            <Text size={TextSize.L} title={t('Комментарии')} />
+            {/* <Suspense fallback={<Loader />}> */}
+            <AddCommentForm onSendComment={onSendComment} />
+            {/* </Suspense> */}
+            <CommentList
+                isLoading={isLoading}
+                comments={comments}
+            />
+        </VStack>
     );
 });
