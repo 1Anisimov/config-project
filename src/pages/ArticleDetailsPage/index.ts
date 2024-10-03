@@ -3,8 +3,8 @@ import { ArticleDetailsPageAsync } from './ui/ArticleDetailsPage/ArticleDetailsP
 export {
     ArticleDetailsPageAsync as ArticleDetailsPage,
 };
-export { ArticleDetailsCommentSchema } from './model/types/ArticleDetailsCommentsSchema';
+export type { ArticleDetailsCommentSchema } from './model/types/ArticleDetailsCommentsSchema';
 
-export { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsPageRecommendationsSchema';
+export type { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsPageRecommendationsSchema';
 
-export { ArticleDetailsPageSchema } from './model/types/index';
+export type { ArticleDetailsPageSchema } from './model/types/index';

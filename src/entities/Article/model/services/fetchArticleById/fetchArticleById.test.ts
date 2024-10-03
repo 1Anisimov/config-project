@@ -1,6 +1,7 @@
 // import axios from 'axios';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { Article, ArticleBlockType, ArticleType } from '../../types/article';
+import { Article } from '../../types/article';
+import { ArticleBlockType, ArticleType } from '../../consts/articleConsts';
 import { fetchArticleById } from './fetchArticleById';
 
 jest.mock('axios');

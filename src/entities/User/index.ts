@@ -4,11 +4,12 @@ export {
     userReducer,
 } from './model/slice/userSlice';
 
-export {
+export type {
     User,
     UserSchema,
-    UserRoles,
 } from './model/types/user';
+
+export { UserRoles } from './model/consts/consts';
 
 export { getUserInited } from '../User/model/selectors/getUserInited/getUserInited';
 

@@ -38,9 +38,9 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
 
         <VStack gap="16" max className={className}>
             <Text size={TextSize.L} title={t('Комментарии')} />
-            {/* <Suspense fallback={<Loader />}> */}
-            <AddCommentForm onSendComment={onSendComment} />
-            {/* </Suspense> */}
+            <Suspense fallback={<Loader />}>
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList
                 isLoading={isLoading}
                 comments={comments}
