@@ -117,6 +117,41 @@
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     }
   ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "https://localhost:3000/admin"
+    },
+    {
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "https://localhost:3000/profile"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "2",
+      "href": "https://localhost:3000/profile"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 5",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
+    }
+  ],
   "profile": [
     {
       "id": "1",

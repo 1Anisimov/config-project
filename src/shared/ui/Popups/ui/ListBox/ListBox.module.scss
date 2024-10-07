@@ -1,0 +1,17 @@
+.options {
+    min-width: 100%;
+    position: absolute;
+    z-index: 10000;
+    background: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px var(--inverted-bg-color);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.item {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
