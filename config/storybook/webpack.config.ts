@@ -12,6 +12,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
         locales: '',
         buildLocales: '',
     };
+    config.resolve!.alias = { '@': paths.src };
     if (config.resolve?.modules) {
         config.resolve?.modules.push(paths.src);
     }
