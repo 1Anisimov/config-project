@@ -12,13 +12,17 @@ export default ({ config }: {config: webpack.Configuration}) => {
         locales: '',
         buildLocales: '',
     };
-    config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') };
+
     if (config.resolve?.modules) {
         config.resolve?.modules.push(paths.src);
     }
     if (config.resolve?.extensions) {
         config.resolve?.extensions.push('.ts', '.tsx');
     }
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': paths.src,
+    };
     // config.resolve.modules = [
     //     path.resolve(__dirname, '../../src'),
     //     'node_modules',

@@ -8,7 +8,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ background: '#1b1d1a' }}><Story /></div>,
+
     ],
 } as ComponentMeta<typeof NotificationItem>;
 

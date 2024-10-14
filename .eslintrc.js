@@ -74,7 +74,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'no-console': 'off',
         'no-debugger': 'off',
-        'forses-plugin/forses-path-checker': 'error',
+        'forses-plugin/forses-path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
