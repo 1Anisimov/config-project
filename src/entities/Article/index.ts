@@ -13,5 +13,3 @@ export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelecto
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 
 export { getArticleDetailsData } from './model/selectors/articleDetails';
-
-export { articleDetailsSlice, articleDetailsReducer } from './model/slice/articleDetailsSlice';
