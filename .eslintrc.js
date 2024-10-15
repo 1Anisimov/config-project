@@ -75,6 +75,7 @@ module.exports = {
         'no-console': 'off',
         'no-debugger': 'off',
         'forses-plugin/forses-path-checker': ['error', { alias: '@' }],
+        'forses-plugin/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

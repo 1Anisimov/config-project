@@ -5,3 +5,5 @@ export {
 };
 
 export type { ArticlesPageSchema } from './model/types/articlesPageSchema';
+
+export { articlesPageReducer } from './model/slices/articlesPageSlice';
