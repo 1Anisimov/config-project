@@ -8,5 +8,3 @@ export type { ArticleDetailsCommentSchema } from './model/types/ArticleDetailsCo
 export type { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsPageRecommendationsSchema';
 
 export type { ArticleDetailsPageSchema } from './model/types/index';
-
-export { articleDetailsPageReducer } from './model/slice/index';

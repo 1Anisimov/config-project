@@ -1,7 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
+// eslint-disable-next-line forses-plugin/layer-imports
 import { Currency } from '@/entities/Currency';
 import { ListBox } from './ListBox';
 

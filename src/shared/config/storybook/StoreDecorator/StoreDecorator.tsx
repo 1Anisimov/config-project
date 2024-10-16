@@ -3,9 +3,9 @@ import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentFormReducer } from '@/features/addComentForm/testing';
 import { loginReducer } from '@/features/AuthByUserName/testing';
-import { articlesPageReducer } from '@/pages/ArticlesPage';
-import { scrollSaveReducer } from '@/features/ScrollSave';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage';
+import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
+import { scrollSaveReducer } from '@/features/ScrollSave/testing';
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
 import { ReducerList } from '../../../lib/components/DynamicModuleLoader/DynamicModuleLoader';
 

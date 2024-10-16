@@ -75,6 +75,10 @@ module.exports = {
         'no-console': 'off',
         'no-debugger': 'off',
         'forses-plugin/forses-path-checker': ['error', { alias: '@' }],
+        'forses-plugin/layer-imports': ['error', {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+        }],
         'forses-plugin/public-api-imports': ['error', {
             alias: '@',
             testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],

@@ -25,7 +25,8 @@
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "generate:slice": "node ./scripts/createSlice/index.js",
-    "updateImports": "ts-node ./scripts/updateImports.ts"
+    "updateImports": "ts-node ./scripts/refactoring/updateImports.ts",
+    "createPublicApiShared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts"
   },
   "keywords": [],
   "author": "",
@@ -69,7 +70,7 @@
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-forses-plugin": "^0.0.5",
+    "eslint-plugin-forses-plugin": "^0.0.6",
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
