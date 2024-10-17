@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { VStack } from '../Stack';
@@ -34,4 +35,5 @@ Light.args = {
         </VStack>
     ),
     isOpen: true,
+    onClose: action('onClose'),
 };

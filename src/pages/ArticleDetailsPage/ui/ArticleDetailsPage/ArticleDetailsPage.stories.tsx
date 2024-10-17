@@ -114,7 +114,6 @@ Light.decorators = [StoreDecorator({
 
 export const LightIsLoading = Template.bind({});
 LightIsLoading.args = {
-
 };
 LightIsLoading.decorators = [StoreDecorator({
 
