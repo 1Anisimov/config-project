@@ -5,9 +5,6 @@ import { Article } from '../../model/types/article';
 
 import { ArticleListItem } from './ArticleListItem';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 const articleList = {
 
     id: '1',
@@ -110,17 +107,3 @@ LightSmall.args = {
     article: articleList,
     view: ArticleView.SMALL,
 };
-
-export const DarkBig = Template.bind({});
-DarkBig.args = {
-    article: articleList,
-    view: ArticleView.BIG,
-};
-DarkBig.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const DarkSmall = Template.bind({});
-DarkSmall.args = {
-    article: articleList,
-    view: ArticleView.SMALL,
-};
-DarkSmall.decorators = [ThemeDecorator(Theme.DARK)];

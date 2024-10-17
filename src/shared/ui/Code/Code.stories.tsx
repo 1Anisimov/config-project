@@ -2,9 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Code } from './Code';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'shared/Code',
     component: Code,
@@ -26,29 +23,3 @@ Light.args = {
     },
 } as ComponentMeta<typeof Code>;`,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    text:
-    `export default {
-    title: 'shared/Code',
-    component: Code,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Code>;`,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const KIDS = Template.bind({});
-KIDS.args = {
-    text:
-    `export default {
-    title: 'shared/Code',
-    component: Code,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Code>;`,
-};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

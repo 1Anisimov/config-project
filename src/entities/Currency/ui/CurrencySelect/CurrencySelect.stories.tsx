@@ -4,9 +4,6 @@ import { Currency } from '../../model/types/currency';
 
 import { CurrencySelect } from './CurrencySelect';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'entities/CurrencySelect',
     component: CurrencySelect,
@@ -21,15 +18,3 @@ export const Primary = Template.bind({});
 Primary.args = {
     value: Currency.RUB,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    value: Currency.RUB,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const KIDS = Template.bind({});
-KIDS.args = {
-    value: Currency.RUB,
-};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

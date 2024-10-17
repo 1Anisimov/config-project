@@ -4,9 +4,6 @@ import { Text } from '../Text/Text';
 
 import { Card } from './Card';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'shared/Card',
     component: Card,
@@ -21,15 +18,3 @@ export const Light = Template.bind({});
 Light.args = {
     children: <Text title="title" text="text text" />,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    children: <Text title="title" text="text text" />,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const KIDS = Template.bind({});
-KIDS.args = {
-    children: <Text title="title" text="text text" />,
-};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

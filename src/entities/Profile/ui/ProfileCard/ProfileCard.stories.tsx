@@ -4,8 +4,6 @@ import { ProfileCard } from './ProfileCard';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'entities/ProfileCard',
@@ -40,33 +38,3 @@ export const WithIsLoading = Template.bind({});
 WithIsLoading.args = {
     isLoading: true,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    data: {
-        first: 'Александр',
-        lastname: 'Анисимов',
-        age: 22,
-        currency: Currency.RUB,
-        country: Country.Russia,
-        city: 'Ekaterinburg',
-        username: 'admin',
-        avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
-    },
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const KIDS = Template.bind({});
-KIDS.args = {
-    data: {
-        first: 'Александр',
-        lastname: 'Анисимов',
-        age: 22,
-        currency: Currency.RUB,
-        country: Country.Russia,
-        city: 'Ekaterinburg',
-        username: 'admin',
-        avatar: 'https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg',
-    },
-};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

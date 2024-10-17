@@ -4,8 +4,6 @@ import ArticlesPage from './ArticlesPage';
 
 import { ArticleBlockType, ArticleType, ArticleView } from '@/entities/Article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
 
 const articlesEntities = {
     id: '1',
@@ -104,23 +102,6 @@ const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {.
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({
-    articlesPage: {
-        entities: {
-            1: articlesEntities,
-            2: articlesEntities,
-            3: articlesEntities,
-        },
-        ids: [1, 2, 3],
-        view: ArticleView.SMALL,
-    },
-    scrollSave: {
-        scroll: {},
-    },
-})];
-
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     articlesPage: {
         entities: {
             1: articlesEntities,

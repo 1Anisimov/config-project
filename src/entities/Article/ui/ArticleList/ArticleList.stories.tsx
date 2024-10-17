@@ -5,9 +5,6 @@ import { Article } from '../../model/types/article';
 
 import { ArticleList } from './ArticleList';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 const articleList = {
 
     id: '1',
@@ -110,18 +107,6 @@ LightBig.args = {
         })),
 };
 
-export const DarkBig = Template.bind({});
-DarkBig.args = {
-    view: ArticleView.BIG,
-    articles: new Array(3)
-        .fill(0)
-        .map((item, index) => ({
-            ...articleList,
-            id: String(index),
-        })),
-};
-DarkBig.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const LightSmall = Template.bind({});
 LightSmall.args = {
     view: ArticleView.SMALL,
@@ -132,18 +117,6 @@ LightSmall.args = {
             id: String(index),
         })),
 };
-
-export const DarkSmall = Template.bind({});
-DarkSmall.args = {
-    view: ArticleView.SMALL,
-    articles: new Array(3)
-        .fill(0)
-        .map((item, index) => ({
-            ...articleList,
-            id: String(index),
-        })),
-};
-DarkSmall.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const isLoadingBig = Template.bind({});
 isLoadingBig.args = {

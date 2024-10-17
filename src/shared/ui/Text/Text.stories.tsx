@@ -2,9 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Text, TextSize, TextTheme } from './Text';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'shared/Text',
     component: Text,
@@ -31,38 +28,12 @@ OnlyText.args = {
     text: 'text text text text text',
 };
 
-export const DarkText = Template.bind({});
-DarkText.args = {
-    title: 'Title Title Title',
-    text: 'text text text text text',
-};
-DarkText.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const OnlyTitleDark = Template.bind({});
-OnlyTitleDark.args = {
-    title: 'Title Title Title',
-};
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const OnlyTextDark = Template.bind({});
-OnlyTextDark.args = {
-    text: 'text text text text text',
-};
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const Error = Template.bind({});
 Error.args = {
     title: 'Title Title Title',
     text: 'text text text text text',
     theme: TextTheme.ERROR,
 };
-
-export const KIDSTheme = Template.bind({});
-KIDSTheme.args = {
-    title: 'Title Title Title',
-    text: 'text text text text text',
-};
-KIDSTheme.decorators = [ThemeDecorator(Theme.KIDS)];
 
 export const TextSizeL = Template.bind({});
 TextSizeL.args = {

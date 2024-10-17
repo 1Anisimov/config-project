@@ -149,7 +149,7 @@ Clear.args = {
 
 ----
 
-## CI pipeline и pre commit хуки
+## CI pipeline
 
 Конфигурация github actions находится в /.github/workflows.
 В ci прогоняются все виды тестов, сборка проекта и сторибука, линтинг.

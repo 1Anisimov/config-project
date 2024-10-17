@@ -2,9 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Input } from './Input';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'shared/Input',
     component: Input,
@@ -19,15 +16,3 @@ export const Primary = Template.bind({});
 Primary.args = {
     placeholder: 'Placeholder',
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    placeholder: 'Placeholder',
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const KIDS = Template.bind({});
-KIDS.args = {
-    placeholder: 'Placeholder',
-};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS)];

@@ -4,8 +4,6 @@ import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'pages/Article/ArticlesPageFilter',
@@ -20,28 +18,6 @@ const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => <Articles
 export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [StoreDecorator({
-    articlesPage: {
-        order: 'asc',
-        search: '',
-        sort: ArticleSortField.CREATED,
-        type: ArticleType.ALL,
-    },
-})];
-
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    articlesPage: {
-        order: 'asc',
-        search: '',
-        sort: ArticleSortField.CREATED,
-        type: ArticleType.ALL,
-    },
-})];
-
-export const KIDS = Template.bind({});
-KIDS.args = {};
-KIDS.decorators = [ThemeDecorator(Theme.KIDS), StoreDecorator({
     articlesPage: {
         order: 'asc',
         search: '',
