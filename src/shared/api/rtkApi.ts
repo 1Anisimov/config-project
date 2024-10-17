@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
 import { LOCAL_STORAGE_THEME_KEY } from '../const/localStorage';
 
 export const rtkApi = createApi({

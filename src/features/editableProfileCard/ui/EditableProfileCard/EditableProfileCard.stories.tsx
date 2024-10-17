@@ -1,9 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Currency } from '@/entities/Currency';
-import { Country } from '@/entities/Country';
 import { EditableProfileCard } from './EditableProfileCard';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'features/EditableProfileCard/EditableProfileCard',

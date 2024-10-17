@@ -1,18 +1,21 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
-import { classNames } from '@/shared/lib/classNames/classNames';
+
+import { articleDetailsPageReducer } from '../../model/slice';
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+
 import { ArticleDetails } from '@/entities/Article';
+import { ArticleRating } from '@/features/articleRating';
+import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader, ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
-import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
-import { articleDetailsPageReducer } from '../../model/slice';
+import { Page } from '@/widgets/Page';
+
 import cls from './ArticleDetailsPage.module.scss';
-import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
-import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
-import { ArticleRating } from '@/features/articleRating';
 
 interface ArticleDetailsPageProps {
     className?: string;

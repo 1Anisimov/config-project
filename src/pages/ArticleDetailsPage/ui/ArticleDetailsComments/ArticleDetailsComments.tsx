@@ -1,17 +1,19 @@
-import { useTranslation } from 'react-i18next';
 import { memo, Suspense, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { VStack } from '@/shared/ui/Stack';
-import { Text, TextSize } from '@/shared/ui/Text';
-import { AddCommentForm } from '@/features/addComentForm';
+
+import { getCommentsIsLoading } from '../../model/selectors/comments';
+import { addComentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
+
 import { CommentList } from '@/entities/Comment';
+import { AddCommentForm } from '@/features/addComentForm';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from '@/shared/ui/Loader';
-import { addComentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import { getCommentsIsLoading } from '../../model/selectors/comments';
-import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
-import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 interface ArticleDetailsCommentsProps {
     className?: string;

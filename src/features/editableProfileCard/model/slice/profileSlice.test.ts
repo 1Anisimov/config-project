@@ -1,9 +1,11 @@
-import { Currency } from '@/entities/Currency';
-import { Country } from '@/entities/Country';
-import { profileActions, profileReducer } from './profileSlice';
-import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ValidateProfileErrors } from '../../model/consts/consts';
+import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';
+
+import { profileActions, profileReducer } from './profileSlice';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
 
 const data = {
     first: 'Александр',

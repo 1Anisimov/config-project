@@ -1,10 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { ArticlesPageFilters } from './ArticlesPageFilters';
+
+import { ArticleSortField, ArticleType } from '@/entities/Article';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleSortField, ArticleType } from '@/entities/Article';
-import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 export default {
     title: 'pages/Article/ArticlesPageFilter',

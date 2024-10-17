@@ -1,10 +1,11 @@
+import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { action } from '@storybook/addon-actions';
+import AddCommentForm from './AddCommentForm';
+
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import AddCommentForm from './AddCommentForm';
 
 export default {
     title: 'features/AddCommentForm',

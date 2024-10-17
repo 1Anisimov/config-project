@@ -1,6 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Text, TextTheme } from '../../../Text/Text';
+
 import { Button } from '../../../Button/Button';
+import { Text, TextTheme } from '../../../Text/Text';
+
 import { Popover } from './Popover';
 
 export default {

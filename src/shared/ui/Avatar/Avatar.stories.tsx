@@ -1,6 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Avatar } from './Avatar';
+
 import Img from '../../assets/icons/smesharik-nusha.jpg';
+
+import { Avatar } from './Avatar';
 
 export default {
     title: 'shared/Avatar',
