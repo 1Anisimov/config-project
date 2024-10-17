@@ -8,7 +8,7 @@ import {
 import { LoginModal } from '@/features/AuthByUserName';
 import { AvatarDropDown } from '@/features/avatarDropDown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
@@ -39,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text className={cls.appLogo} theme={TextTheme.INVERTED} title={t('Project o_0')} />
-                <AppLink className={cls.createLink} theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
+                <AppLink className={cls.createLink} theme={AppLinkTheme.SECONDARY} to={getRouteArticleCreate()}>
                     {t('Создать статью')}
                 </AppLink>
                 <HStack align="center" gap="16" className={cls.actions}>

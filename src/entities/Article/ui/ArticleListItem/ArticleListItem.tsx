@@ -8,7 +8,7 @@ import {
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 import EyeIcon from '@/shared/assets/icons/eye_icon.svg';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -31,11 +31,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         className, article, view, target,
     } = props;
     const { t } = useTranslation();
-    // const navigate = useNavigate();
-
-    // const onOpenArticle = useCallback(() => {
-    //     navigate(RoutePath.article_details + article.id);
-    // }, [article.id, navigate]);
 
     const types = <Text className={cls.types} text={article.type.join(', ')} />;
 
@@ -68,7 +63,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         />
                     )}
                     <div className={cls.footer}>
-                        <AppLink target={target} to={RoutePath.article_details + article.id}>
+                        <AppLink target={target} to={getRouteArticleDetails(article.id)}>
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                             >
@@ -86,7 +81,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>
