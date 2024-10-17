@@ -7483,10 +7483,10 @@ eslint-module-utils@^2.12.0:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-forses-plugin@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/eslint-plugin-forses-plugin/-/eslint-plugin-forses-plugin-0.0.6.tgz"
-  integrity sha512-700H17Q91VS7NxpDTj2Sc/8c5Mc0Vk9oxtH6Og56ZZMP0VXYGWDDeOqprCdgDOOEHe5Ki6OWgN7wYmXEGADeAA==
+eslint-plugin-forses-plugin@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/eslint-plugin-forses-plugin/-/eslint-plugin-forses-plugin-0.0.7.tgz"
+  integrity sha512-Fe8zt8kBrJjx6oL/JYK+YwH0Tn/0X1erZQFU9Bi6lB2ReOKTV7A5c6NvdhblA+KhjOIhWPWTPs79b5iBpGIPOA==
   dependencies:
     micromatch "^4.0.8"
     requireindex "^1.2.0"
