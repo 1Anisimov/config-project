@@ -26,7 +26,8 @@
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "updateImports": "ts-node ./scripts/refactoring/updateImports.ts",
-    "createPublicApiShared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts"
+    "createPublicApiShared": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
+    "postinstall": "rimraf ./node_modules/.cache"
   },
   "keywords": [],
   "author": "",
