@@ -12,7 +12,7 @@ const MainPage = (props: MainPageProps) => {
     const { t } = useTranslation();
 
     return (
-        <Page className={classNames('', {}, [className])}>
+        <Page data-testid="MainPage" className={classNames('', {}, [className])}>
             {t('Главная страница')}
         </Page>
     );
