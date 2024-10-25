@@ -167,6 +167,15 @@
         "MANAGER"
       ],
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
+    },
+    {
+      "id": "4",
+      "username": "luka",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     }
   ],
   "notifications": [
@@ -236,6 +245,17 @@
       "country": "Belarus",
       "city": "Moscow",
       "username": "tony",
+      "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Лука",
+      "lastname": "Модрич",
+      "age": 39,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "luka",
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     }
   ],

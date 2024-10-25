@@ -15,6 +15,7 @@ const MainPage = (props: MainPageProps) => {
         <Page data-testid="MainPage" className={classNames('', {}, [className])}>
             {t('Главная страница')}
         </Page>
+
     );
 };
 
