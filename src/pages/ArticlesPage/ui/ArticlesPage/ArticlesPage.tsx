@@ -1,6 +1,7 @@
 import { memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import { useArticleItemById } from '../../model/selectors/articlePageSelectors';
 import {
     fetchNextArticlePage,
 } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage';
@@ -34,6 +35,8 @@ const ArticlesPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const dispatch = useAppDispatch();
     const [searchParams] = useSearchParams();
+    const articleById = useArticleItemById('1');
+    console.log(articleById);
 
     useInitialEffect(() => {
         dispatch(initArticlesPage(searchParams));
