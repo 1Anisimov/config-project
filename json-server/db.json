@@ -122,6 +122,12 @@
       "userId": "1",
       "feedback": "good",
       "id": "kSh3g91"
+    },
+    {
+      "articleId": "4",
+      "rate": 3,
+      "userId": "1",
+      "id": "JmriL4t"
     }
   ],
   "profile-ratings": [
@@ -148,6 +154,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://img.razrisyika.ru/kart/38/1200/151874-smeshariki-nyusha-36.jpg"
     },
     {
@@ -157,6 +167,10 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     },
     {
@@ -166,6 +180,10 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": false
+      },
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     },
     {
@@ -175,6 +193,10 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://i.pinimg.com/736x/a6/07/ed/a607ed16ab5479d95c7df913be51dde8.jpg"
     }
   ],
