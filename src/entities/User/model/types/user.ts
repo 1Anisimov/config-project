@@ -1,5 +1,7 @@
 import { UserRoles } from '../consts/consts';
 
+import { JsonSettings } from './jsonSettings';
+
 import { FeatureFlags } from '@/shared/types/featureFlags';
 
 export interface User {
@@ -8,6 +10,7 @@ export interface User {
     avatar?: string;
     roles?: UserRoles[];
     features?: FeatureFlags;
+    jsonSettings?: JsonSettings;
 }
 
 export interface UserSchema {
